@@ -1,23 +1,23 @@
----
-layout: workshop
-root: .
-venue: University of Connecticut
-address: 100 Connecticut Street
-country: United-States
-language: en
-latlng: 41.808477, -72.254259
-humandate: Mar 7-8, 2016
-humantime: 9:00 am - 4:30 pm
-startdate: 2016-03-07
-enddate: 2016-03-08
-instructor: ["Josh Herr","Kate Hertweck"]
-helper: [ ]
-contact: carolyn.mills@uconn.edu
-etherpad: https://public.etherpad-mozilla.org/p/2016-03-07-uconn
-eventbrite:
-day1_am: "Data organization in spreadsheets and OpenRefine"
-day1_pm: "Introduction to R"
-day2_am: "Data analysis and visualization in R"
+--- 
+layout: workshop 
+root: . 
+venue: University of Connecticut 
+address: 100 Connecticut Street 
+country: United-States 
+language: en 
+latlng: 41.808477, -72.254259 
+humandate: Mar 7-8, 2016 
+humantime: 9:00 am - 4:30 pm 
+startdate: 2016-03-07 
+enddate: 2016-03-08 
+instructor: ["Josh Herr","Kate Hertweck"] 
+helper: [ ] 
+contact: carolyn.mills@uconn.edu 
+etherpad: https://public.etherpad-mozilla.org/p/2016-03-07-uconn 
+eventbrite: 
+day1_am: "Data organization in spreadsheets and OpenRefine" 
+day1_pm: "Introduction to R" 
+day2_am: "Data analysis and visualization in R" 
 day2_pm: "SQL for data management"
 ---
 <!--
@@ -27,7 +27,6 @@ day2_pm: "SQL for data management"
   workshop.  Run 'tools/check' *before* committing to make sure that
   changes are good.
 -->
-
 <!--
   EVENTBRITE
 
@@ -37,17 +36,10 @@ day2_pm: "SQL for data management"
   displayed if the 'eventbrite' field in the header is not set.
 -->
 {% if page.eventbrite %}
-<iframe
-  src="https://www.eventbrite.com/tickets-external?eid={{page.eventbrite}}&ref=etckt"
-  frameborder="0"
-  width="100%"
-  height="206px"
-  scrolling="auto">
+<iframe src="https://www.eventbrite.com/tickets-external?eid={{page.eventbrite}}&ref=etckt" frameborder="0" width="100%" height="206px" scrolling="auto">
 </iframe>
 {% endif %}
-
 <h2>General Information</h2>
-
 <!--
   INTRODUCTION
 
@@ -55,17 +47,11 @@ day2_pm: "SQL for data management"
   the pitch.
 -->
 <p>
-<a href=http://datacarpentry.org>Data Carpentry</a> workshops are for any researcher
-who has data they want to analyze, and no prior computational experience is required.
-This hands-on workshop teaches basic concepts, skills and tools for working more
-effectively with data.
+    <a href=http://datacarpentry.org>Data Carpentry</a> workshops are for any researcher who has data they want to analyze, and no prior computational experience is required. This hands-on workshop teaches basic concepts, skills and tools for working more effectively with data.
 </p>
 <p>
-We will cover {{page.day1_am}}, {{page.day1_pm}}, {{page.day2_am}} and {{page.day2_pm}}.
-
-Participants should bring their laptops and plan to participate actively. By the end of the workshop learners should be able to more effectively manage and analyze data and be able to apply the tools and approaches directly to their ongoing research.
+    We will cover {{page.day1_am}}, {{page.day1_pm}}, {{page.day2_am}} and {{page.day2_pm}}. Participants should bring their laptops and plan to participate actively. By the end of the workshop learners should be able to more effectively manage and analyze data and be able to apply the tools and approaches directly to their ongoing research.
 </p>
-
 <!--
   AUDIENCE
 
@@ -73,10 +59,8 @@ Participants should bring their laptops and plan to participate actively. By the
   workshop is only open to people from a particular institution.
 -->
 <p>
-  <strong>Who:</strong>
-  The course is aimed at graduate students and other researchers.
+    <strong>Who:</strong> The course is aimed at graduate students and other researchers.
 </p>
-
 <!--
   LOCATION
 
@@ -87,28 +71,21 @@ Participants should bring their laptops and plan to participate actively. By the
 -->
 {% if page.latlng %}
 <p>
-  <strong>Where:</strong>
-  {{page.address}}.
-  Get directions with
-  <a href="//www.openstreetmap.org/?mlat={{page.latlng | replace:',','&mlon='}}&zoom=16">OpenStreetMap</a>
-  or
-  <a href="//maps.google.com/maps?q={{page.latlng}}">Google Maps</a>.
+    <strong>Where:</strong> {{page.address}}. Get directions with
+    <a href="//www.openstreetmap.org/?mlat={{page.latlng | replace:',','&mlon='}}&zoom=16">OpenStreetMap</a> or
+    <a href="//maps.google.com/maps?q={{page.latlng}}">Google Maps</a>.
 </p>
 {% endif %}
-
 <!--
   SPECIAL REQUIREMENTS
 
   Modify the block below if there are any special requirements.
 -->
 <p>
-  <strong>Requirements:</strong> Participants must bring a laptop with
-  a few specific software packages installed (listed
-  <a href="#setup">below</a>). They are also required to abide by
-  Data Carpentry's
-  <a href="{{site.swc_site}}/conduct.html">Code of Conduct</a>.
+    <strong>Requirements:</strong> Participants must bring a laptop with a few specific software packages installed (listed
+    <a href="#setup">below</a>). They are also required to abide by Data Carpentry's
+    <a href="{{site.swc_site}}/conduct.html">Code of Conduct</a>.
 </p>
-
 <!--
   CONTACT EMAIL ADDRESS
 
@@ -117,18 +94,11 @@ Participants should bring their laptops and plan to participate actively. By the
   used.
 -->
 <p>
-  <strong>Contact</strong>:
-  Please mail
-  {% if page.contact %}
-    <a href='mailto:{{page.contact}}'>{{page.contact}}</a>
-  {% else %}
-    <a href='mailto:{{site.contact}}'>{{site.contact}}</a>
-  {% endif %}
-  for more information.
+    <strong>Contact</strong>: Please mail {% if page.contact %}
+    <a href='mailto:{{page.contact}}'>{{page.contact}}</a> {% else %}
+    <a href='mailto:{{site.contact}}'>{{site.contact}}</a> {% endif %} for more information.
 </p>
-
 <hr/>
-
 <!--
   SCHEDULE
 
@@ -137,25 +107,32 @@ Participants should bring their laptops and plan to participate actively. By the
   2' to be actual dates or days of the week.
 -->
 <h2>Preliminary Schedule</h2>
-
 <div class="row">
-  <div class="col-md-6">
-
-    <h3>Day 1</h3>
-    <table class="table table-striped">
-      <tr> <td>Morning</td>  <td>{{page.day1_am}}</td> </tr>
-       <tr> <td>Afternoon</td>  <td>{{page.day1_pm}}</td> </tr>
-    </table>
-
-
-    <h3>Day 2</h3>
-    <table class="table table-striped">
-      <tr> <td>Morning</td>  <td>{{page.day2_am}}</td> </tr>
-      <tr> <td>Afternoon</td>  <td>{{page.day2_pm}}</td> </tr>
-    </table>
- </div>
+    <div class="col-md-6">
+        <h3>Day 1</h3>
+        <table class="table table-striped">
+            <tr>
+                <td>Morning</td>
+                <td>{{page.day1_am}}</td>
+            </tr>
+            <tr>
+                <td>Afternoon</td>
+                <td>{{page.day1_pm}}</td>
+            </tr>
+        </table>
+        <h3>Day 2</h3>
+        <table class="table table-striped">
+            <tr>
+                <td>Morning</td>
+                <td>{{page.day2_am}}</td>
+            </tr>
+            <tr>
+                <td>Afternoon</td>
+                <td>{{page.day2_pm}}</td>
+            </tr>
+        </table>
+    </div>
 </div>
-
 <!--
   ETHERPAD
 
@@ -170,14 +147,11 @@ Participants should bring their laptops and plan to participate actively. By the
 -->
 {% if page.etherpad %}
 <p>
-  <strong>Etherpad:</strong> <a href="{{page.etherpad}}">{{page.etherpad}}</a>.
-  <br/>
-  We will use this Etherpad for chatting, taking notes, and sharing URLs and bits of code.
+    <strong>Etherpad:</strong> <a href="{{page.etherpad}}">{{page.etherpad}}</a>.
+    <br/> We will use this Etherpad for chatting, taking notes, and sharing URLs and bits of code.
 </p>
 {% endif %}
-
 <hr/>
-
 <!--
   SYLLABUS
 
@@ -273,7 +247,6 @@ Participants should bring their laptops and plan to participate actively. By the
 
 <hr/>
 -->
-
 <!--
   SETUP
 
@@ -285,21 +258,51 @@ Participants should bring their laptops and plan to participate actively. By the
   please preview your site before committing, and make sure to run
   'tools/check' as well.
 -->
-
 <h2 id="setup">Setup</h2>
-
 <p>
-To participate in a Data Carpentry workshop, you will need working copies of the
-described software. Please make sure to install everything (or at least to download
-the installers) before the start of your workshop. Participants should bring and use
-their own laptops to insure the proper setup of tools for an efficient workflow
-once you leave the workshop.
-<p>
-Please follow these <a href=install.html>Setup Instructions</a>
+    To participate in a Data Carpentry workshop, you will need working copies of the described software. Please make sure to install everything (or at least to download the installers) before the start of your workshop. Participants should bring and use their own laptops to insure the proper setup of tools for an efficient workflow once you leave the workshop.
+    <p>
+        Please follow these <a href=install.html>Setup Instructions</a>
+        <p>
+            We maintain a list of common issues that occur during installation as a reference for instructors that may be useful on the
+            <a href="https://github.com/swcarpentry/workshop-template/wiki/Configuration-Problems-and-Solutions">Configuration Problems and Solutions wiki page</a>.
+        </p>
 
-<p>
-  We maintain a list of common issues that occur during installation as a reference for instructors
-  that may be useful on the
-  <a href = "https://github.com/swcarpentry/workshop-template/wiki/Configuration-Problems-and-Solutions">Configuration Problems and Solutions wiki page</a>.
-</p>
-
+<h2 id="instructors">Instructors</h2>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="col-md-3">
+                    <center>
+                        <img class="img-circle img-responsive img-center" src="img/josh.jpg" alt="" height="150" width="150">
+                    </center>
+                </div>
+                <div class="col-md-3">
+                    <center>
+                        <h3><a href="http://joshuaherr.com">Josh Herr</a></h3>
+                    </center>
+                </div>
+                <div class="col-md-6">
+                    <p>Josh is an Assistant Professor at the University of Nebraska - Lincoln in the Department of Plant Pathology and The Center for Plant Science Innovation.  His research involves the genomics and bioinformatics of host-microbes interactions using microbial ecology and metagenomics techniques.  He is an instructor for both Software Carpentry and Data Carpentry.</p>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="col-md-3">
+                    <center>
+                        <img class="img-circle img-responsive img-center" src="img/kate.jpg" alt="" height="150" width="150">
+                    </center>
+                </div>
+                <div class="col-md-3">
+                    <center>
+                        <h3><a href="http://k8hert.blogspot.com/">Kate Hertweck</a></h3>
+                    </center>
+                </div>
+                <div class="col-md-6">
+                    <p>Kate is an Assistant Professor at the University of Texas - Tyler in the Department of Biology.  Her research involves the genomics and bioinformatics of the patterns of transposable elements within and between genomes.  She is an instructor for both Software Carpentry and Data Carpentry.</p>
+                </div>
+            </div>
+        </div>
+        <br>
